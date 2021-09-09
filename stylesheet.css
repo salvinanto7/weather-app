@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300,400,500,600,700&display=swap');
+body{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    height: 100vh;
+    width:100%;
+    -webkit-overflow-scrolling: none;
+    scrollbar-width:0;
+    -ms-overflow-style: none;
+    background-color: rgb(27, 57, 92);
+    color: #f4e6c1;
+    font-family: 'lato', sans-serif;
+}
+
+footer{
+    background-color: rgb(31, 34, 82,0,.3);
+    color:rgba(255,255,255,0.5);
+    height:auto;
+    bottom:0;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+footer p{
+    margin: auto;
+    padding: auto;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:70vh;
+    align-items: center;
+}
+
+.main-disp{
+    align-items: center;
+    position: relative;
+}
+
+.main-disp .inner-circle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height:6.5em;
+    min-width:6.5em;
+    border-radius: 50%;
+    border: solid 4px white;
+    font-size: 3em;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+    padding:0.75em;
+    color:#e7721d;
+}
+.main-disp .inner-circle .inner-circle-info{
+    display: block;
+    text-align: center;
+    align-items: center;
+    font-size: 0.6em;
+}
+
+.main-disp  .inner-circle .inner-circle-info img{
+    max-width:1.5em;
+    max-height: 1.5em;
+}
+
+.expand{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    font-size: 1.5em;
+    color:white;
+}
+
+.expand button{
+    background-color: rgba(255,255,255,0.1);
+    padding: 0.5em 1em;
+    margin: 0%;
+    color: white;
+    font-size: 0.75em;
+    border: none;
+    border-radius: 0.5em;
+    align-items: center;
+}
+.expand button i{
+    margin: 0.5em;
+}
+
+.day{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+#time{ 
+    font-size: 3em;
+    margin: 0.25em;
+}
+#time span{
+    font-size: 0.6em;
+    font-weight: 100;
+}
+#date{
+    font-size: 1em;
+    font-weight: 100;
+}
+#temp{
+    font-size: 0.75em;
+}
+#date span{
+    font-weight: 200;
+}
+
+#location{
+    margin-top:0;
+    padding-bottom:0.5em;
+    float:right;
+}
+
+.weather span{
+    font-weight: 100;
+}
+.weather{
+    font-weight: 600;
+    font-size: 1em;
+}
+
+/*weather forecast section*/
+
+#week-forecast{
+    display:flex;   
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background: linear-gradient(transparent,black);
+    height: 30vh;
+}
+.tmrw{
+    padding: 1em;
+    border:2px solid white;
+    border-radius: 0.75em;
+    background-color: rgba(0,0,0,0.1);
+}
+.tmrw-temp{
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tmrw-temp img{
+    max-width:1.5em;
+    max-height: 1.5em;
+}
+
+.tmrw-temp .temp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+.tmrw-temp .date p{
+    font-size: 0.7em;
+    font-weight: 200;
+}
+.week{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-betwee;
+}
+.week-day{
+    padding: 1em;
+    border:2px solid white;
+    border-radius: 0.75em;
+    background-color: rgba(0,0,0,0.1);
+    margin:0 2em;
+}
+.week-day h3{
+    font-weight: 200;
+    background-color: rgba(255,255,255,0.1);
+    align-items: center;
+    text-align: center;
+    padding:0.3em;
+    margin:0;
+    border-radius: 0.5em;
+}
+.week-day .tmrw-temp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.week-day .tmrw-temp img{
+    max-height: 1em;
+    max-width:1em;
+    margin-left:0.5em;
+}
