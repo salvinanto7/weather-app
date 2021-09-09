@@ -6,11 +6,12 @@ body{
     height: 100vh;
     width:100%;
     -webkit-overflow-scrolling: none;
-    scrollbar-width:0;
+    scrollbar-width:none;
     -ms-overflow-style: none;
     background-color: rgb(27, 57, 92);
     color: #f4e6c1;
     font-family: 'lato', sans-serif;
+    overflow-y: scroll;
 }
 
 footer{
@@ -53,7 +54,7 @@ footer p{
     align-items: center;
     text-align: center;
     z-index: 3;
-    padding:0.75em;
+    padding:0.5em;
     color:#e7721d;
 }
 .main-disp .inner-circle .inner-circle-info{
@@ -72,7 +73,8 @@ footer p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70vh;
+    height: auto;
+    padding:0;
     font-size: 1.5em;
     color:white;
 }
@@ -82,7 +84,7 @@ footer p{
     padding: 0.5em 1em;
     margin: 0%;
     color: white;
-    font-size: 0.75em;
+    font-size: 0.7em;
     border: none;
     border-radius: 0.5em;
     align-items: center;
@@ -107,6 +109,7 @@ footer p{
 #time span{
     font-size: 0.6em;
     font-weight: 100;
+    color:#e7721d;
 }
 #date{
     font-size: 1em;
@@ -115,14 +118,11 @@ footer p{
 #temp{
     font-size: 0.75em;
 }
-#date span{
-    font-weight: 200;
-}
-
 #location{
     margin-top:0;
     padding-bottom:0.5em;
     float:right;
+    color:#e7721d;
 }
 
 .weather span{
@@ -141,7 +141,6 @@ footer p{
     justify-content: space-evenly;
     width: 100%;
     background: linear-gradient(transparent,black);
-    height: 30vh;
 }
 .tmrw{
     padding: 1em;
@@ -205,9 +204,11 @@ footer p{
 
 @media only screen and (max-width:1600px){
     #week-forecast{
-        overflow-y: scroll;
+        overflow-y: hidden;
+        overflow-x:scroll;
         -ms-overflow-style: none;
-        scrollbar-width: none;
+        scrollbar-width:none;
+        -webkit-overflow-scrolling: none;
         justify-content: start;
     }
     .week-day{
@@ -240,16 +241,17 @@ footer p{
     #main{
         display: flex;
         flex-direction: column;
+        padding-top:10px;
     }
     .main-disp .inner-circle{
         min-height:5em;
         min-width:5em;
         font-size:2em;
+        margin:0;
     }
     .main-disp .inner-circle h2{
-        font-size: 1.3em;
+        font-size: 1em;
     }
-
     .expand button{
         font-size: 0.5em;
         position: absolute;
@@ -259,6 +261,7 @@ footer p{
         width:50px;
         height:50px;
         border-radius:50%;
+        color:#e7721d;
     }
     .expand .today-info .date-time p{
         font-size:1em;
@@ -269,5 +272,4 @@ footer p{
     .expand .today-info .weather{
         font-size:0.7em;
     }
-    
 }
