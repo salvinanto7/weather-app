@@ -97,6 +97,9 @@ footer p{
     justify-content: space-between;
     margin: 0;
 }
+#tmrw-temp{
+    min-width:10em;
+}
 #time{ 
     font-size: 3em;
     margin: 0.25em;
@@ -198,4 +201,73 @@ footer p{
     max-height: 1em;
     max-width:1em;
     margin-left:0.5em;
+}
+
+@media only screen and (max-width:1600px){
+    #week-forecast{
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        justify-content: start;
+    }
+    .week-day{
+        margin:1em;
+    }
+    #tmrw-temp{
+        min-width:10em;
+    }
+}
+
+@media only screen and (max-width:1400px){
+    .week-day{
+        margin:0.5em;
+        height: auto;
+    }
+}
+@media only screen and (max-width:1300px){
+    .tmrw{
+        font-size: 1em;
+    }
+    .week{
+        font-size: 0.9em;
+    }
+    .week-day{
+        min-width:9em;
+    }
+}
+
+@media only screen and (max-width:780px){
+    #main{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-disp .inner-circle{
+        min-height:5em;
+        min-width:5em;
+        font-size:2em;
+    }
+    .main-disp .inner-circle h2{
+        font-size: 1.3em;
+    }
+
+    .expand button{
+        font-size: 0.5em;
+        position: absolute;
+        top:0;
+        left:0%;
+        border-radius: 0;
+        width:50px;
+        height:50px;
+        border-radius:50%;
+    }
+    .expand .today-info .date-time p{
+        font-size:1em;
+    }
+    .expand .today-info .date-time .day{
+        font-size:0.85em;
+    }
+    .expand .today-info .weather{
+        font-size:0.7em;
+    }
+    
 }
