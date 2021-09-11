@@ -160,9 +160,6 @@ footer p{
     z-index:999;
 }
 
-.theme-section{
-    visibility: collapse;
-}
 
 .theme-list{
     max-height: 80%;

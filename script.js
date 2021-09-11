@@ -129,3 +129,10 @@ function updateWeatherData(data){
     tmrwForecast.innerHTML = tmrwWeatherForecast;
 }
 
+const themeBtn = document.getElementById('theme-btn');
+const themeSec = document.getElementById('themes');
+
+themeBtn.addEventListener('click',()=>{
+        themeSec.style.display = 'none';
+    }
+    });
