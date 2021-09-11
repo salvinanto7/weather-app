@@ -131,7 +131,42 @@ function updateWeatherData(data){
 
 const themeBtn = document.getElementById('theme-btn');
 const themeSec = document.getElementById('themes');
+const themeBtnSecond = document.getElementById('theme-btn-2');
 
 themeBtn.addEventListener('click',()=>{
-        themeSec.style.display = 'none';
+        themeSec.style.display = 'block';
+        themeSec.style.transition = '0.5s ease-in-out';
+        themeBtn.style.opacity = '0';
+        themeBtn.style.transition = '0.25s ease-in-out';
     });
+
+themeBtnSecond.addEventListener('click',()=>{
+    themeSec.style.display = 'none';
+    themeSec.style.transition = '0.5s ease-in-out';
+    themeBtn.style.opacity = '100';
+    themeBtn.style.transition = '0.25s ease-in-out';
+    
+})
+
+const theme1 = document.getElementById('opt-1');
+const theme2 = document.getElementById('opt-2');
+const theme3 = document.getElementById('opt-3');
+const theme4 = document.getElementById('opt-4');
+const theme5 = document.getElementById('opt-5');
+
+theme1.addEventListener('click',()=>{
+    document.body.style.background = '#fff url(./images/forest.jpg) no-repeat fixed left';
+    body.style.objectFit = 'cover';
+});
+theme2.addEventListener('click',()=>{
+    document.body.style.background = '#fff url(./images/sea.jpg) no-repeat fixed left';
+});
+theme3.addEventListener('click',()=>{
+    document.body.style.background = '#fff url(./images/space.jpg) no-repeat fixed left';
+});
+theme4.addEventListener('click',()=>{
+    document.body.style.background = '#fff url(./images/dogs.jpg) no-repeat fixed left';
+});
+theme5.addEventListener('click',()=>{
+    document.body.style.background = '#fff url(./images/cat.jpg) no-repeat fixed left';
+});

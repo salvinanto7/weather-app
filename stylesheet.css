@@ -12,6 +12,7 @@ body{
     color: #f4e6c1;
     font-family: 'lato', sans-serif;
     overflow-y: scroll;
+    background: url(./images/forest.jpg) no-repeat fixed left;
 }
 
 footer{
@@ -56,6 +57,7 @@ footer p{
     z-index: 3;
     padding:0.5em;
     color:#e7721d;
+    background-color: rgba(0,0,0,0.25);
 }
 .main-disp .inner-circle .inner-circle-info{
     display: block;
@@ -77,9 +79,12 @@ footer p{
     padding:0;
     font-size: 1.5em;
     color:white;
+    background-color: rgba(0,0,0,0.3);
+    padding:1em;
+    border-radius: 0.25em;
 }
 
-.expand button{
+.expand button, .theme-list button{
     background-color: rgba(255,255,255,0.1);
     padding: 0.5em 1em;
     margin: 0%;
@@ -89,15 +94,23 @@ footer p{
     border-radius: 0.5em;
     align-items: center;
     cursor: pointer;
+    z-index: 999;
 }
 
 .expand button:hover{
     background-color: rgba(255,255,255,0.25);
 }
+
 .expand button i{
     margin: 0.5em;
 }
-
+.theme-list button{
+    font-size: 1em;
+    width:70%;
+    margin-top: 1em;
+    background-color: rgb(26, 49, 77);
+    color:rgba(255,255,255,0.85)
+}
 .day{
     display: flex;
     flex-direction: row;
@@ -145,6 +158,7 @@ footer p{
 /* theme section styling*/
 
 #themes{
+    display: none;
     background-color: rgba(255,255,255, 0.5);
     max-width:30em;
     position: absolute;
@@ -155,7 +169,7 @@ footer p{
     scrollbar-width:none;
     -ms-overflow-style: none;
     cursor:pointer;
-    z-index:999;
+    z-index:99;
 }
 
 
