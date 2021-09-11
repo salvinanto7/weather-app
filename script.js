@@ -134,5 +134,4 @@ const themeSec = document.getElementById('themes');
 
 themeBtn.addEventListener('click',()=>{
         themeSec.style.display = 'none';
-    }
     });
