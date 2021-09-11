@@ -57,11 +57,12 @@ function get_weather_data(){
 }
 
 function updateWeatherData(data){
-    let{humidity,pressure,temp,visibility,wind_speed}=data.current;
+    let{humidity,pressure,temp,sunrise,sunset,wind_speed}=data.current;
     const temp1 = document.getElementById('temp-1');
     const pressure1 = document.getElementById('pressure-1');
     const humidity1 = document.getElementById('humidity-1');
-    const visibility1 = document.getElementById('visibility-1');
+    const sunrise1 = document.getElementById('sunrise');
+    const sunset1 = document.getElementById('sunset');
     const windSpeed1 = document.getElementById('wind-speed-1');
     const location = document.getElementById('location');
     
@@ -70,7 +71,8 @@ function updateWeatherData(data){
     humidity1.innerHTML = `<span>Humidity</span>  &nbsp; &nbsp; ${humidity}%`;
     windSpeed1.innerHTML = `<span>Wind Speed</span> &nbsp; &nbsp; ${wind_speed} km/h`
     location.innerHTML = data.timezone;
-    
+    sunrise1.innerHTML = 'Sunrise : '+window.moment(sunrise * 1000).format('HH:mm a');
+    sunset1.innerHTML = 'Sunset : '+window.moment(sunset*1000).format('HH:mm a');
     let otherforecast='';
     let tmrwWeatherForecast='';
     data.daily.forEach((day,idx) => {
@@ -89,7 +91,7 @@ function updateWeatherData(data){
             <div class="tmrw-temp" id="tmrw-temp">
                 <div class="temp">
                     <p class="temp"> ${day.temp.day}&#176C</p>
-                    <img src="./images/rainy-day.png" alt="">
+                    <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" alt="">
                 </div>
                 <div class="date">
                     <p id=tmrw-date>${tmrwDate}th ${months[tmrwMonth]} ${tmrwYear}</p>
@@ -97,9 +99,9 @@ function updateWeatherData(data){
                 </div>
             </div>
             <div class="tmrw-info weather">
-                <p id="pressure"> <span>Pressure</span> &nbsp; &nbsp; 1010mb</p>
+                <p id="pressure"> <span>Pressure</span> &nbsp; &nbsp; ${day.pressure}mb</p>
                     <p id="humidity"><span>Humidity</span>  &nbsp; &nbsp; ${day.humidity}%</p>
-                    <p id="aiq"><span>Wind Speed</span> &nbsp; &nbsp; 3 km/h</p>
+                    <p id="aiq"><span>Wind Speed</span> &nbsp; &nbsp; ${day.wind_speed}km/h</p>
             </div>
             `
         }
@@ -109,7 +111,7 @@ function updateWeatherData(data){
                 <h3>${days[idx]}</h3>
                 <div class="tmrw-temp">
                     <p class="temp"> ${day.temp.day}&#176C</p>
-                    <img src="./images/rainy-day.png" alt="">
+                    <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" alt="">
                 </div>
                 <div class="tmrw-info weather">
                     <p id="pressure"> <span>Pressure</span> &nbsp; &nbsp; ${day.pressure}mb</p>

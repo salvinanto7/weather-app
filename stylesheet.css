@@ -51,7 +51,7 @@ footer p{
     min-width:6.5em;
     border-radius: 50%;
     border: solid 4px white;
-    font-size: 3em;
+    font-size: 2.5em;
     align-items: center;
     text-align: center;
     z-index: 3;
@@ -59,11 +59,23 @@ footer p{
     color:#e7721d;
     background-color: rgba(0,0,0,0.25);
 }
+.main-disp .inner-circle .inner-circle-left h2{
+    font-size: 2em;
+    margin: 0;
+    padding:0;
+}
 .main-disp .inner-circle .inner-circle-info{
     display: block;
     text-align: center;
     align-items: center;
     font-size: 0.6em;
+}
+.main-disp .inner-circle .inner-circle-left h4{
+    font-size: 0.4em;
+    font-weight: 100;
+    color: white;
+    padding:0;
+    margin: 0;
 }
 
 .main-disp  .inner-circle .inner-circle-info img{
