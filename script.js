@@ -148,16 +148,11 @@ themeBtnSecond.addEventListener('click',()=>{
     
 })
 
-const theme1 = document.getElementById('opt-1');
 const theme2 = document.getElementById('opt-2');
 const theme3 = document.getElementById('opt-3');
 const theme4 = document.getElementById('opt-4');
 const theme5 = document.getElementById('opt-5');
 
-theme1.addEventListener('click',()=>{
-    document.body.style.background = '#fff url(./images/forest.jpg) no-repeat fixed left';
-    body.style.objectFit = 'cover';
-});
 theme2.addEventListener('click',()=>{
     document.body.style.background = '#fff url(./images/sea.jpg) no-repeat fixed left';
 });
