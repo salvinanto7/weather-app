@@ -91,7 +91,7 @@ function updateWeatherData(data){
             <div class="tmrw-temp" id="tmrw-temp">
                 <div class="temp">
                     <p class="temp"> ${day.temp.day}&#176C</p>
-                    <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" alt="">
+                    <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" alt="">
                 </div>
                 <div class="date">
                     <p id=tmrw-date>${tmrwDate}th ${months[tmrwMonth]} ${tmrwYear}</p>
@@ -111,7 +111,7 @@ function updateWeatherData(data){
                 <h3>${days[idx]}</h3>
                 <div class="tmrw-temp">
                     <p class="temp"> ${day.temp.day}&#176C</p>
-                    <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" alt="">
+                    <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" alt="">
                 </div>
                 <div class="tmrw-info weather">
                     <p id="pressure"> <span>Pressure</span> &nbsp; &nbsp; ${day.pressure}mb</p>
