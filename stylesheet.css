@@ -286,6 +286,7 @@ footer p{
 }
 
 @media only screen and (max-width:1600px){
+    
     #week-forecast{
         overflow-y: hidden;
         overflow-x:scroll;
@@ -299,6 +300,25 @@ footer p{
     }
     #tmrw-temp{
         min-width:10em;
+    }
+    .expand .today-info .date-time p{
+        font-size:1em;
+    }
+    .expand .today-info .date-time .day{
+        font-size:0.8em;
+    }
+    .expand .today-info .weather{
+        font-size:0.7em;
+    }
+    #location{
+        font-size: smaller;
+        margin: 0;
+        margin-top:5px;
+        padding: 0;
+    }
+    #date,#day{
+        padding: 0;
+        margin: auto;
     }
 }
 
@@ -319,7 +339,7 @@ footer p{
         min-width:9em;
     }
 }
-
+/*
 @media only screen and (max-width:780px){
     #main{
         display: flex;
@@ -341,9 +361,9 @@ footer p{
         top:0;
         left:0%;
         border-radius: 0;
-        width:50px;
+        width:70px;
         height:50px;
-        border-radius:50%;
+        border-radius:10%;
         color:#e7721d;
     }
     .expand .today-info .date-time p{
@@ -355,4 +375,65 @@ footer p{
     .expand .today-info .weather{
         font-size:0.7em;
     }
+}
+*/
+@media only screen and (max-width:800px){
+    .main-disp{
+        max-height:60vh;
+        margin-top:none;
+        padding-top:none;
+        position: absolute;
+        max-height: 50vh;
+    }
+    .main-disp .inner-circle{
+        display: none;
+    }
+
+    .expand button{
+        font-size: 0.5em;
+        position: absolute;
+        top:0;
+        left:0%;
+        border-radius: 0;
+        width:70px;
+        height:50px;
+        border-radius:10%;
+        color:#e7721d;
+    }
+    .expand .today-info .date-time p{
+        font-size:1em;
+    }
+    .expand .today-info .date-time .day{
+        font-size:0.8em;
+    }
+    .expand .today-info .weather{
+        font-size:0.7em;
+    }
+
+    .expand{
+        padding:auto;
+    }
+    .expand .today-info{
+        padding-top: auto;
+    }
+    .expand .today-info .date-time .day{
+        margin-top: none;
+    }
+
+    #week-forecast{
+        position: absolute;
+        bottom: 0;
+    }
+
+    #location{
+        font-size: smaller;
+        margin: 0;
+        margin-top:5px;
+        padding: 0;
+    }
+    #date,#day{
+        padding: 0;
+        margin: auto;
+    }
+    
 }
