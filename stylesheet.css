@@ -378,6 +378,10 @@ footer p{
 }
 */
 @media only screen and (max-width:800px){
+    .body{
+        height: 100vh;
+        position:fixed;
+    }
     .main-disp{
         max-height:60vh;
         margin-top:none;
@@ -389,6 +393,9 @@ footer p{
         display: none;
     }
 
+    .expand{
+        background-color: transparent;
+    }
     .expand button{
         font-size: 0.5em;
         position: absolute;
